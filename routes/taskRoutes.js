@@ -22,10 +22,11 @@ const {
 } = require("./../utils/validators/taskValidators.js");
 const router = express.Router();
 
+router.use(protect);
+
 router
   .route("/")
   .post(
-    protect,
     uploadTaskFile,
     resizeTaskFile,
     createTaskValidators,

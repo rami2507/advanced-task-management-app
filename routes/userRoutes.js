@@ -29,7 +29,7 @@ router.post(
   register
 );
 
-// router.use(protect, restrictTo(["admin"]));
+router.use(protect, restrictTo(["admin"]));
 
 router.route("/").get(getUsers);
 router
